@@ -1,0 +1,27 @@
+root = true
+
+[*]
+indent_style = space
+
+[*.{xml,csproj,targets}]
+indent_size = 2
+
+[*.cs]
+indent_size = 4
+tab_width = 4
+end_of_line = lf
+insert_final_newline = false
+
+dotnet_separate_import_directive_groups = true
+dotnet_sort_system_directives_first = true
+file_header_template = unset
+csharp_style_namespace_declarations = file_scoped
+
+dotnet_diagnostic.CA1720.severity = none
+dotnet_code_quality.CA1711.allowed_suffixes = Dictionary|Flags
+
+
+[*{Tests,Benchmarks}.cs]
+dotnet_diagnostic.CA1305.severity = none
+dotnet_diagnostic.CA1707.severity = none
+dotnet_diagnostic.CA1822.severity = none
